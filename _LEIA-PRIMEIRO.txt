@@ -1,0 +1,67 @@
+═══════════════════════════════════════════════════════════
+   NANOBOT - Instalador
+   Por @vjdanilocoimbra
+═══════════════════════════════════════════════════════════
+
+
+COMO INSTALAR (simples assim):
+
+   1. Clique DUPLO em:  Instalar_Nanobot.exe
+
+   2. Se aparecer tela AZUL do Windows:
+        - Clique em "Mais informacoes"
+        - Clique em "Executar assim mesmo"
+
+   3. Clique SIM no aviso de administrador
+
+   4. Clique em "INSTALAR REQUISITOS"
+
+   5. Aguarde 5 a 15 minutos.
+
+   6. Quando terminar, o NANOBOT ABRE SOZINHO numa nova janela.
+
+
+PRIMEIRO USO - CHAVE DA OPENAI:
+
+   O Nanobot usa OpenAI (gpt-4o-mini), que e barato e eficaz.
+
+   PASSO 1 - Criar chave:
+      https://platform.openai.com/api-keys
+      Login (ou cadastra) -> Create new secret key
+      Copia a chave (comeca com sk-proj-...)
+
+   PASSO 2 - Adicionar credito (minimo 5 dolares):
+      https://platform.openai.com/settings/organization/billing
+      Add payment method -> Add credits ($5)
+
+   PASSO 3 - Colar a chave no Nanobot:
+      Quando o instalador terminar, vai abrir o arquivo
+      de configuracao no Bloco de Notas.
+      Procure "apiKey" e cole sua chave entre as aspas.
+      Ctrl+S pra salvar, feche o Bloco de Notas.
+
+
+QUANTO CUSTA:
+
+   gpt-4o-mini: aproximadamente R$0,006 por mensagem.
+   Com 5 dolares (~R$28) voce tem 3 a 6 MESES de uso.
+
+
+DEPOIS DA PRIMEIRA VEZ:
+
+   Toda vez que quiser usar:
+      Clique DUPLO no atalho "Conversar com Nanobot"
+      na Area de Trabalho.
+
+
+SE O ANTIVIRUS BLOQUEAR O .EXE:
+
+   Use o  Instalar_Nanobot.bat  (botao direito ->
+   "Executar como administrador"). Faz a mesma coisa.
+
+
+SUPORTE:
+
+   Instagram: @vjdanilocoimbra
+
+═══════════════════════════════════════════════════════════

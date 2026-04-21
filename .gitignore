@@ -1,0 +1,13 @@
+# Sistema (Windows / macOS)
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# Arquivos temporários
+*.tmp
+*.log
+*.bak
+~$*
+
+# Zip gerado (vai pra Release, não pro repositório)
+Nanobot_Instalador.zip
