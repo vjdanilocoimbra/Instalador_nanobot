@@ -55,34 +55,6 @@ $lblSub.AutoSize  = $true
 $lblSub.Location  = [System.Drawing.Point]::new(26, 52)
 $form.Controls.Add($lblSub)
 
-# Link clicavel pro Instagram do criador (igual ao instalador oficial)
-$lnkInsta = [System.Windows.Forms.LinkLabel]::new()
-$lnkInsta.Text            = "@vjdanilocoimbra"
-$lnkInsta.Font            = [System.Drawing.Font]::new("Consolas", 9, [System.Drawing.FontStyle]::Bold)
-$lnkInsta.LinkColor       = [System.Drawing.Color]::FromArgb(0, 212, 255)
-$lnkInsta.ActiveLinkColor = [System.Drawing.Color]::FromArgb(29, 233, 182)
-$lnkInsta.VisitedLinkColor = [System.Drawing.Color]::FromArgb(0, 212, 255)
-$lnkInsta.BackColor       = $C_BG
-$lnkInsta.AutoSize        = $true
-$lnkInsta.Location        = [System.Drawing.Point]::new(560, 18)
-$lnkInsta.Cursor          = [System.Windows.Forms.Cursors]::Hand
-$lnkInsta.Add_LinkClicked({ Start-Process "https://www.instagram.com/vjdanilocoimbra/" })
-$form.Controls.Add($lnkInsta)
-
-# Animacao de pulso no link (mesmo efeito do instalador oficial)
-$pulseTimer = [System.Windows.Forms.Timer]::new()
-$pulseTimer.Interval = 50
-$script:pulsePhase = 0.0
-$pulseTimer.Add_Tick({
-    $script:pulsePhase += 0.04
-    $s = [Math]::Sin($script:pulsePhase)
-    $lnkInsta.LinkColor = [System.Drawing.Color]::FromArgb(
-        [Math]::Max(0, [Math]::Min(255, [int](0 + 29 * [Math]::Max(0, $s)))),
-        [Math]::Max(0, [Math]::Min(255, [int](170 + 63 * $s))),
-        [Math]::Max(0, [Math]::Min(255, [int](220 + 35 * $s))))
-})
-$pulseTimer.Start()
-
 # Separador
 $sep1 = [System.Windows.Forms.Panel]::new()
 $sep1.BackColor = $C_LINE
@@ -231,6 +203,29 @@ $btnClose.FlatAppearance.BorderColor = [System.Drawing.Color]::FromArgb(70, 35, 
 $btnClose.FlatAppearance.BorderSize  = 1
 $btnClose.Cursor    = [System.Windows.Forms.Cursors]::Hand
 $form.Controls.Add($btnClose)
+
+# Rodape discreto - creditos do instalador
+$lblFooter = [System.Windows.Forms.Label]::new()
+$lblFooter.Text      = "Instalador desenvolvido por"
+$lblFooter.Font      = [System.Drawing.Font]::new("Consolas", 7)
+$lblFooter.ForeColor = $C_DIM
+$lblFooter.BackColor = $C_BG
+$lblFooter.AutoSize  = $true
+$lblFooter.Location  = [System.Drawing.Point]::new(240, 548)
+$form.Controls.Add($lblFooter)
+
+$lnkFooter = [System.Windows.Forms.LinkLabel]::new()
+$lnkFooter.Text            = "@vjdanilocoimbra"
+$lnkFooter.Font            = [System.Drawing.Font]::new("Consolas", 7)
+$lnkFooter.LinkColor       = $C_DIM
+$lnkFooter.ActiveLinkColor = $C_CYAN
+$lnkFooter.VisitedLinkColor = $C_DIM
+$lnkFooter.BackColor       = $C_BG
+$lnkFooter.AutoSize        = $true
+$lnkFooter.Location        = [System.Drawing.Point]::new(378, 548)
+$lnkFooter.Cursor          = [System.Windows.Forms.Cursors]::Hand
+$lnkFooter.Add_LinkClicked({ Start-Process "https://www.instagram.com/vjdanilocoimbra/" })
+$form.Controls.Add($lnkFooter)
 
 # ==================================================================
 # FUNCOES AUXILIARES
